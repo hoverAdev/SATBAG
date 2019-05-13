@@ -1,0 +1,12 @@
+{
+  "room1": {
+    "Items": [
+      "letter",
+      "note"
+    ],
+    "Description": "You awaken in a mysterious empty room.",
+    "Gateways": [
+
+    ]
+  }
+}
