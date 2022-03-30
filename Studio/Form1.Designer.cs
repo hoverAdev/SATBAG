@@ -40,8 +40,8 @@
             this.NewRoom = new System.Windows.Forms.Button();
             this.DelRoom = new System.Windows.Forms.Button();
             this.GatewaysBox = new System.Windows.Forms.GroupBox();
-            this.GateScroller = new System.Windows.Forms.Panel();
             this.AddGateway = new System.Windows.Forms.Button();
+            this.GateScroller = new System.Windows.Forms.Panel();
             this.DescCont = new System.Windows.Forms.GroupBox();
             this.DescBox = new System.Windows.Forms.TextBox();
             this.NameCont = new System.Windows.Forms.GroupBox();
@@ -181,8 +181,8 @@
             // 
             // GatewaysBox
             // 
-            this.GatewaysBox.Controls.Add(this.AddGateway);
             this.GatewaysBox.Controls.Add(this.GateScroller);
+            this.GatewaysBox.Controls.Add(this.AddGateway);
             this.GatewaysBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.GatewaysBox.Location = new System.Drawing.Point(284, 48);
             this.GatewaysBox.Name = "GatewaysBox";
@@ -190,15 +190,6 @@
             this.GatewaysBox.TabIndex = 5;
             this.GatewaysBox.TabStop = false;
             this.GatewaysBox.Text = "Gateways";
-            // 
-            // GateScroller
-            // 
-            this.GateScroller.AutoScroll = true;
-            this.GateScroller.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GateScroller.Location = new System.Drawing.Point(3, 19);
-            this.GateScroller.Name = "GateScroller";
-            this.GateScroller.Size = new System.Drawing.Size(315, 341);
-            this.GateScroller.TabIndex = 4;
             // 
             // AddGateway
             // 
@@ -211,6 +202,15 @@
             this.AddGateway.Text = "+";
             this.AddGateway.UseVisualStyleBackColor = true;
             this.AddGateway.Click += new System.EventHandler(this.AddGateway_Click);
+            // 
+            // GateScroller
+            // 
+            this.GateScroller.AutoScroll = true;
+            this.GateScroller.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GateScroller.Location = new System.Drawing.Point(3, 19);
+            this.GateScroller.Name = "GateScroller";
+            this.GateScroller.Size = new System.Drawing.Size(315, 318);
+            this.GateScroller.TabIndex = 4;
             // 
             // DescCont
             // 

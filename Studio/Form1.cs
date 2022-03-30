@@ -155,6 +155,7 @@ namespace SATBAG_GameBuilder
         {
             GatePanel gate = new();
             GateScroller.Controls.Add(gate.Container);
+            gate.Rooms.DataSource = rooms.Keys.ToList();
             gate.Rooms.Text = room;
             gate.Delete.Click += RemEntry;
 
@@ -191,6 +192,8 @@ namespace SATBAG_GameBuilder
             Rooms.Width = 150;
             Container.Height = 23;
             Delete.Width = Delete.Height;
+
+            Delete.Text = "X";
 
             Delete.Click += Delete_Click; 
 
