@@ -1,6 +1,6 @@
 ﻿namespace SATBAG_GameBuilder
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,53 +30,69 @@
         {
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Rooms");
             this.OpenButton = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.saveButton = new System.Windows.Forms.Button();
+            this.FlowFiles = new System.Windows.Forms.FlowLayoutPanel();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.OpenFile = new System.Windows.Forms.OpenFileDialog();
             this.SaveFile = new System.Windows.Forms.SaveFileDialog();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.newRoom = new System.Windows.Forms.Button();
-            this.delRoom = new System.Windows.Forms.Button();
+            this.SplitPrimary = new System.Windows.Forms.SplitContainer();
             this.RoomList = new System.Windows.Forms.TreeView();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.FlowButtons = new System.Windows.Forms.FlowLayoutPanel();
+            this.NewRoom = new System.Windows.Forms.Button();
+            this.DelRoom = new System.Windows.Forms.Button();
+            this.GatewaysBox = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.DescBox = new System.Windows.Forms.TextBox();
+            this.NameCont = new System.Windows.Forms.GroupBox();
+            this.NameBox = new System.Windows.Forms.TextBox();
+            this.FlowFiles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SplitPrimary)).BeginInit();
+            this.SplitPrimary.Panel1.SuspendLayout();
+            this.SplitPrimary.Panel2.SuspendLayout();
+            this.SplitPrimary.SuspendLayout();
+            this.FlowButtons.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.NameCont.SuspendLayout();
             this.SuspendLayout();
             // 
             // OpenButton
             // 
+            this.OpenButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.OpenButton.AutoSize = true;
             this.OpenButton.Location = new System.Drawing.Point(3, 3);
+            this.OpenButton.MinimumSize = new System.Drawing.Size(45, 20);
             this.OpenButton.Name = "OpenButton";
             this.OpenButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.OpenButton.Size = new System.Drawing.Size(75, 25);
+            this.OpenButton.Size = new System.Drawing.Size(81, 25);
             this.OpenButton.TabIndex = 1;
             this.OpenButton.Text = "Open";
             this.OpenButton.UseVisualStyleBackColor = true;
             this.OpenButton.Click += new System.EventHandler(this.OpenButton_Click);
             // 
-            // flowLayoutPanel1
+            // FlowFiles
             // 
-            this.flowLayoutPanel1.Controls.Add(this.OpenButton);
-            this.flowLayoutPanel1.Controls.Add(this.saveButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 30);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.FlowFiles.AutoSize = true;
+            this.FlowFiles.Controls.Add(this.OpenButton);
+            this.FlowFiles.Controls.Add(this.SaveButton);
+            this.FlowFiles.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FlowFiles.Location = new System.Drawing.Point(0, 0);
+            this.FlowFiles.Name = "FlowFiles";
+            this.FlowFiles.Size = new System.Drawing.Size(175, 31);
+            this.FlowFiles.TabIndex = 3;
+            this.FlowFiles.WrapContents = false;
             // 
-            // saveButton
+            // SaveButton
             // 
-            this.saveButton.AutoSize = true;
-            this.saveButton.Location = new System.Drawing.Point(84, 3);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.saveButton.Size = new System.Drawing.Size(75, 25);
-            this.saveButton.TabIndex = 2;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SaveButton.AutoSize = true;
+            this.SaveButton.Location = new System.Drawing.Point(90, 3);
+            this.SaveButton.MinimumSize = new System.Drawing.Size(40, 20);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SaveButton.Size = new System.Drawing.Size(81, 25);
+            this.SaveButton.TabIndex = 2;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // OpenFile
             // 
@@ -85,94 +101,174 @@
             // 
             // SaveFile
             // 
+            this.SaveFile.CheckPathExists = false;
             this.SaveFile.DefaultExt = "xml";
             this.SaveFile.Filter = "XML files|*.xml|All files|*.*";
+            this.SaveFile.InitialDirectory = "./";
             // 
-            // splitContainer1
+            // SplitPrimary
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(12, 48);
-            this.splitContainer1.Name = "splitContainer1";
+            this.SplitPrimary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SplitPrimary.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.SplitPrimary.Location = new System.Drawing.Point(0, 0);
+            this.SplitPrimary.Name = "SplitPrimary";
             // 
-            // splitContainer1.Panel1
+            // SplitPrimary.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanel2);
-            this.splitContainer1.Panel1.Controls.Add(this.RoomList);
-            this.splitContainer1.Size = new System.Drawing.Size(776, 390);
-            this.splitContainer1.SplitterDistance = 258;
-            this.splitContainer1.TabIndex = 4;
+            this.SplitPrimary.Panel1.Controls.Add(this.RoomList);
+            this.SplitPrimary.Panel1.Controls.Add(this.FlowFiles);
+            this.SplitPrimary.Panel1.Controls.Add(this.FlowButtons);
+            this.SplitPrimary.Panel1MinSize = 120;
             // 
-            // flowLayoutPanel2
+            // SplitPrimary.Panel2
             // 
-            this.flowLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.Controls.Add(this.newRoom);
-            this.flowLayoutPanel2.Controls.Add(this.delRoom);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 361);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(52, 26);
-            this.flowLayoutPanel2.TabIndex = 0;
-            // 
-            // newRoom
-            // 
-            this.newRoom.Location = new System.Drawing.Point(3, 3);
-            this.newRoom.Name = "newRoom";
-            this.newRoom.Size = new System.Drawing.Size(20, 20);
-            this.newRoom.TabIndex = 1;
-            this.newRoom.Text = "+";
-            this.newRoom.UseVisualStyleBackColor = true;
-            // 
-            // delRoom
-            // 
-            this.delRoom.Location = new System.Drawing.Point(29, 3);
-            this.delRoom.Name = "delRoom";
-            this.delRoom.Size = new System.Drawing.Size(20, 20);
-            this.delRoom.TabIndex = 2;
-            this.delRoom.Text = "X";
-            this.delRoom.UseVisualStyleBackColor = true;
+            this.SplitPrimary.Panel2.Controls.Add(this.GatewaysBox);
+            this.SplitPrimary.Panel2.Controls.Add(this.groupBox2);
+            this.SplitPrimary.Panel2.Controls.Add(this.NameCont);
+            this.SplitPrimary.Size = new System.Drawing.Size(784, 411);
+            this.SplitPrimary.SplitterDistance = 175;
+            this.SplitPrimary.TabIndex = 4;
+            this.SplitPrimary.TabStop = false;
             // 
             // RoomList
             // 
-            this.RoomList.Location = new System.Drawing.Point(3, 4);
+            this.RoomList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RoomList.HideSelection = false;
+            this.RoomList.Location = new System.Drawing.Point(0, 31);
+            this.RoomList.MinimumSize = new System.Drawing.Size(174, 180);
             this.RoomList.Name = "RoomList";
             treeNode2.Name = "Rooms";
             treeNode2.Text = "Rooms";
             this.RoomList.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode2});
-            this.RoomList.Size = new System.Drawing.Size(252, 354);
+            this.RoomList.Size = new System.Drawing.Size(175, 354);
             this.RoomList.TabIndex = 0;
             this.RoomList.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.RoomList_AfterSelect);
             // 
-            // Form1
+            // FlowButtons
+            // 
+            this.FlowButtons.Controls.Add(this.NewRoom);
+            this.FlowButtons.Controls.Add(this.DelRoom);
+            this.FlowButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.FlowButtons.Location = new System.Drawing.Point(0, 385);
+            this.FlowButtons.Name = "FlowButtons";
+            this.FlowButtons.Size = new System.Drawing.Size(175, 26);
+            this.FlowButtons.TabIndex = 0;
+            // 
+            // NewRoom
+            // 
+            this.NewRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NewRoom.Location = new System.Drawing.Point(3, 3);
+            this.NewRoom.Name = "NewRoom";
+            this.NewRoom.Size = new System.Drawing.Size(20, 20);
+            this.NewRoom.TabIndex = 1;
+            this.NewRoom.Text = "+";
+            this.NewRoom.UseVisualStyleBackColor = true;
+            this.NewRoom.Click += new System.EventHandler(this.NewRoom_Click);
+            // 
+            // DelRoom
+            // 
+            this.DelRoom.Location = new System.Drawing.Point(29, 3);
+            this.DelRoom.Name = "DelRoom";
+            this.DelRoom.Size = new System.Drawing.Size(20, 20);
+            this.DelRoom.TabIndex = 2;
+            this.DelRoom.Text = "-";
+            this.DelRoom.UseVisualStyleBackColor = true;
+            this.DelRoom.Click += new System.EventHandler(this.DelRoom_Click);
+            // 
+            // GatewaysBox
+            // 
+            this.GatewaysBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.GatewaysBox.Location = new System.Drawing.Point(287, 48);
+            this.GatewaysBox.Name = "GatewaysBox";
+            this.GatewaysBox.Size = new System.Drawing.Size(318, 363);
+            this.GatewaysBox.TabIndex = 5;
+            this.GatewaysBox.TabStop = false;
+            this.GatewaysBox.Text = "Gateways";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.DescBox);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox2.Location = new System.Drawing.Point(0, 48);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(281, 363);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Description";
+            // 
+            // DescBox
+            // 
+            this.DescBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DescBox.Location = new System.Drawing.Point(3, 19);
+            this.DescBox.MinimumSize = new System.Drawing.Size(100, 23);
+            this.DescBox.Multiline = true;
+            this.DescBox.Name = "DescBox";
+            this.DescBox.Size = new System.Drawing.Size(275, 341);
+            this.DescBox.TabIndex = 1;
+            this.DescBox.TextChanged += new System.EventHandler(this.DescBox_TextChanged);
+            // 
+            // NameCont
+            // 
+            this.NameCont.Controls.Add(this.NameBox);
+            this.NameCont.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NameCont.Location = new System.Drawing.Point(0, 0);
+            this.NameCont.Name = "NameCont";
+            this.NameCont.Size = new System.Drawing.Size(605, 48);
+            this.NameCont.TabIndex = 3;
+            this.NameCont.TabStop = false;
+            this.NameCont.Text = "Name";
+            // 
+            // NameBox
+            // 
+            this.NameBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NameBox.Location = new System.Drawing.Point(3, 19);
+            this.NameBox.MinimumSize = new System.Drawing.Size(100, 23);
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(599, 23);
+            this.NameBox.TabIndex = 1;
+            this.NameBox.TextChanged += new System.EventHandler(this.NameBox_TextChanged);
+            // 
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "Form1";
-            this.Text = "GameBuilder";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.SplitPrimary);
+            this.MinimumSize = new System.Drawing.Size(500, 300);
+            this.Name = "MainWindow";
+            this.Text = "SATBAG Studio";
+            this.FlowFiles.ResumeLayout(false);
+            this.FlowFiles.PerformLayout();
+            this.SplitPrimary.Panel1.ResumeLayout(false);
+            this.SplitPrimary.Panel1.PerformLayout();
+            this.SplitPrimary.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SplitPrimary)).EndInit();
+            this.SplitPrimary.ResumeLayout(false);
+            this.FlowButtons.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.NameCont.ResumeLayout(false);
+            this.NameCont.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Button OpenButton;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Button saveButton;
+        private FlowLayoutPanel FlowFiles;
+        private Button SaveButton;
         private OpenFileDialog OpenFile;
         private SaveFileDialog SaveFile;
-        private SplitContainer splitContainer1;
+        private SplitContainer SplitPrimary;
         private TreeView RoomList;
-        private Button newRoom;
-        private Button delRoom;
-        private FlowLayoutPanel flowLayoutPanel2;
+        private Button NewRoom;
+        private Button DelRoom;
+        private FlowLayoutPanel FlowButtons;
+        private TextBox NameBox;
+        private TextBox DescBox;
+        private GroupBox GatewaysBox;
+        private GroupBox groupBox2;
+        private GroupBox NameCont;
     }
 }

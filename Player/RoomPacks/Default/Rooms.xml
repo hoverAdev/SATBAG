@@ -1,5 +1,5 @@
 
-<GameDefinition>
+<GameDef>
   <Rooms>
     <Room>
       <Name>start</Name>
@@ -42,4 +42,4 @@
       </GatewayInputs>
     </Room>
   </Rooms>
-</GameDefinition>
+</GameDef>

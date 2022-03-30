@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GameDefinition>
+<GameDef>
     <Rooms>
         <Room>
             <Name>Room1</Name>
@@ -18,7 +18,7 @@
 			<string>Room3</string>
 		 </Gateways>
         </Room>
-<Room>
+        <Room>
             <Name>Room3</Name>
             <Description>salt</Description>
             <Gateways>
@@ -27,4 +27,4 @@
 		 </Gateways>
         </Room>
     </Rooms>
-</GameDefinition>
+</GameDef>

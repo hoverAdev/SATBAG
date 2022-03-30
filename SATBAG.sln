@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SATBAG", "Player\SATBAG.csproj", "{4CCDAE47-69FA-491D-9A85-D02543FC8729}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SATBAG_GameBuilder", "Studio\SATBAG_GameBuilder.csproj", "{A1FCC3E8-ECDA-41FF-8F7A-A49DEA1FCA22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SATBAG_Studio", "Studio\SATBAG_Studio.csproj", "{A1FCC3E8-ECDA-41FF-8F7A-A49DEA1FCA22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

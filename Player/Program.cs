@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 namespace SATBAG
 {
-    public class GameDefinition
+    public class GameDef
     {
         public List<Room> Rooms { get; set; }
 
@@ -28,12 +28,12 @@ namespace SATBAG
             string input;
 
             XmlSerializer mySerializer =
-            new(typeof(GameDefinition));
+            new(typeof(GameDef));
             // To read the file, create a FileStream.  
             FileStream fs =
             new("./Rooms.xml", FileMode.Open);
             // Call the Deserialize method and cast to the object type.  
-            var game = (GameDefinition)mySerializer.Deserialize(fs);
+            var game = (GameDef)mySerializer.Deserialize(fs);
             var rooms = new Dictionary<string, Room>();
             foreach (Room r in game.Rooms)
             {
