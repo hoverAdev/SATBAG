@@ -17,7 +17,7 @@ namespace SATBAG
 
         public String Description { get; set; }
 
-        public List<string> Gateways { get; set; }
+        public List<String> Gateways { get; set; }
     }
     class Program
     {

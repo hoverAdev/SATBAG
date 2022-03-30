@@ -6,17 +6,17 @@
             <Description>This is a Description</Description>
             <Gateways>
                 <string>Room2</string>
-			<string>Room1</string>
-		 </Gateways>
+	    	<string>Room1</string>
+	    </Gateways>
         </Room>
         <Room>
             <Name>Room2</Name>
             <Description>This is also a Description</Description>
             <Gateways>
-                <string>Room1</string>
-			<string>Room2</string>
-			<string>Room3</string>
-		 </Gateways>
+            	<string>Room1</string>
+		<string>Room2</string>
+		<string>Room3</string>
+	    </Gateways>
         </Room>
         <Room>
             <Name>Room3</Name>

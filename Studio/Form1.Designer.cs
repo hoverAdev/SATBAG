@@ -40,7 +40,9 @@
             this.NewRoom = new System.Windows.Forms.Button();
             this.DelRoom = new System.Windows.Forms.Button();
             this.GatewaysBox = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.GateScroller = new System.Windows.Forms.Panel();
+            this.AddGateway = new System.Windows.Forms.Button();
+            this.DescCont = new System.Windows.Forms.GroupBox();
             this.DescBox = new System.Windows.Forms.TextBox();
             this.NameCont = new System.Windows.Forms.GroupBox();
             this.NameBox = new System.Windows.Forms.TextBox();
@@ -50,7 +52,8 @@
             this.SplitPrimary.Panel2.SuspendLayout();
             this.SplitPrimary.SuspendLayout();
             this.FlowButtons.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.GatewaysBox.SuspendLayout();
+            this.DescCont.SuspendLayout();
             this.NameCont.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,7 +126,7 @@
             // SplitPrimary.Panel2
             // 
             this.SplitPrimary.Panel2.Controls.Add(this.GatewaysBox);
-            this.SplitPrimary.Panel2.Controls.Add(this.groupBox2);
+            this.SplitPrimary.Panel2.Controls.Add(this.DescCont);
             this.SplitPrimary.Panel2.Controls.Add(this.NameCont);
             this.SplitPrimary.Size = new System.Drawing.Size(784, 411);
             this.SplitPrimary.SplitterDistance = 175;
@@ -178,24 +181,47 @@
             // 
             // GatewaysBox
             // 
+            this.GatewaysBox.Controls.Add(this.AddGateway);
+            this.GatewaysBox.Controls.Add(this.GateScroller);
             this.GatewaysBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.GatewaysBox.Location = new System.Drawing.Point(287, 48);
+            this.GatewaysBox.Location = new System.Drawing.Point(284, 48);
             this.GatewaysBox.Name = "GatewaysBox";
-            this.GatewaysBox.Size = new System.Drawing.Size(318, 363);
+            this.GatewaysBox.Size = new System.Drawing.Size(321, 363);
             this.GatewaysBox.TabIndex = 5;
             this.GatewaysBox.TabStop = false;
             this.GatewaysBox.Text = "Gateways";
             // 
-            // groupBox2
+            // GateScroller
             // 
-            this.groupBox2.Controls.Add(this.DescBox);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox2.Location = new System.Drawing.Point(0, 48);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(281, 363);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Description";
+            this.GateScroller.AutoScroll = true;
+            this.GateScroller.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GateScroller.Location = new System.Drawing.Point(3, 19);
+            this.GateScroller.Name = "GateScroller";
+            this.GateScroller.Size = new System.Drawing.Size(315, 341);
+            this.GateScroller.TabIndex = 4;
+            // 
+            // AddGateway
+            // 
+            this.AddGateway.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AddGateway.Location = new System.Drawing.Point(3, 337);
+            this.AddGateway.MaximumSize = new System.Drawing.Size(23, 23);
+            this.AddGateway.Name = "AddGateway";
+            this.AddGateway.Size = new System.Drawing.Size(23, 23);
+            this.AddGateway.TabIndex = 3;
+            this.AddGateway.Text = "+";
+            this.AddGateway.UseVisualStyleBackColor = true;
+            this.AddGateway.Click += new System.EventHandler(this.AddGateway_Click);
+            // 
+            // DescCont
+            // 
+            this.DescCont.Controls.Add(this.DescBox);
+            this.DescCont.Dock = System.Windows.Forms.DockStyle.Left;
+            this.DescCont.Location = new System.Drawing.Point(0, 48);
+            this.DescCont.Name = "DescCont";
+            this.DescCont.Size = new System.Drawing.Size(281, 363);
+            this.DescCont.TabIndex = 4;
+            this.DescCont.TabStop = false;
+            this.DescCont.Text = "Description";
             // 
             // DescBox
             // 
@@ -246,8 +272,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.SplitPrimary)).EndInit();
             this.SplitPrimary.ResumeLayout(false);
             this.FlowButtons.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.GatewaysBox.ResumeLayout(false);
+            this.DescCont.ResumeLayout(false);
+            this.DescCont.PerformLayout();
             this.NameCont.ResumeLayout(false);
             this.NameCont.PerformLayout();
             this.ResumeLayout(false);
@@ -268,7 +295,9 @@
         private TextBox NameBox;
         private TextBox DescBox;
         private GroupBox GatewaysBox;
-        private GroupBox groupBox2;
+        private GroupBox DescCont;
         private GroupBox NameCont;
+        private Button AddGateway;
+        private Panel GateScroller;
     }
 }
