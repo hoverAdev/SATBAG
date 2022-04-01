@@ -3,7 +3,7 @@ namespace SATBAG_GameBuilder
 
     public partial class MainWindow : Form
     {
-        Dictionary<string,Room> rooms = new();
+        Dictionary<string, Room> rooms = new();
 
         public MainWindow()
         {
@@ -164,6 +164,11 @@ namespace SATBAG_GameBuilder
                 rooms[room].Gateways.RemoveAt(index);
             }
         }
+
+        private void SwitchText_TextChanged(object sender, EventArgs e)
+        {
+            rooms[NameBox.Text].SwitchSet = SwitchText.Text;
+        }
     }
 
     public class GatePanel 
@@ -208,16 +213,19 @@ namespace SATBAG_GameBuilder
     public class GameDef
     {
         public List<Room> Rooms { get; set; }
-
     }
+
     public class Room
     {
-
         public String Name { get; set; }
 
         public String Description { get; set; }
 
+        public String SwitchSet { get; set; }
+
         public List<String> Gateways { get; set; }
+
+        public List<String> GatewayInputs { get; set; }
     }
 
 }

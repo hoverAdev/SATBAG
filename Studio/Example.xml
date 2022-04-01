@@ -5,10 +5,10 @@
 			<Name>start</Name>
 			<Description>Example Room</Description>
 			<Gateways>
-				
+				<string>start</string>
 			</Gateways>
 			<GatewayInputs>
-				
+				<string>stay</string>
 			</GatewayInputs>
 		</Room>
 	</Rooms>
