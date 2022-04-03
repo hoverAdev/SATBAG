@@ -11,6 +11,8 @@
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <IsPublishable>True</IsPublishable>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,13 +24,11 @@
   <ItemGroup>
     <None Remove=".gitignore" />
     <None Remove="RoomPacks\Default\Rooms.xml" />
-    <None Remove="Rooms.xml" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="RoomPacks\Default\Rooms.xml" />
-    <Content Include="Rooms.xml">
+    <Content Include="RoomPacks\Default\Rooms.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -37,6 +37,9 @@
     <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
+    </None>
+    <None Update="RoomPacks\SwitchTest\Rooms.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

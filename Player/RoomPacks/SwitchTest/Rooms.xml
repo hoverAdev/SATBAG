@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Rooms>
+		<Room>
+			<Name>StartRoom</Name>
+			<Description>This is the starting room.</Description>
+			<SwitchMan>
+				<Set />
+				<Remove />
+				<Check />
+				<GoToIf />
+			</SwitchMan>
+			<Gateways>
+				<string>StartRoom</string>
+				<string>SwitchSet</string>
+				<string>SwitchCheck</string>
+				<string>SwitchRemove</string>
+			</Gateways>
+		</Room>
+		<Room>
+			<Name>SwitchSet</Name>
+			<Description>This room will set a switch.</Description>
+			<SwitchMan>
+				<Set>Switch</Set>
+				<Remove />
+				<Check />
+				<GoToIf />
+			</SwitchMan>
+			<Gateways>
+				<string>SwitchSet</string>
+				<string>StartRoom</string>
+			</Gateways>
+		</Room>
+		<Room>
+			<Name>SwitchRemove</Name>
+			<Description>This room will remove a switch.</Description>
+			<SwitchMan>
+				<Set />
+				<Remove>Switch</Remove>
+				<Check />
+				<GoToIf />
+			</SwitchMan>
+			<Gateways>
+				<string>SwitchSet</string>
+				<string>StartRoom</string>
+			</Gateways>
+		</Room>
+		<Room>
+			<Name>SwitchCheck</Name>
+			<Description>The switch in SwitchSet has not been activated.</Description>
+			<SwitchMan>
+				<Set />
+				<Remove />
+				<Check>Switch</Check>
+				<GoToIf>SwitchCheck_1</GoToIf>
+			</SwitchMan>
+			<Gateways>
+				<string>StartRoom</string>
+				<string>SwitchCheck</string>
+			</Gateways>
+		</Room>
+		<Room>
+			<Name>SwitchCheck_1</Name>
+			<Description>The switch in SwitchSet has been activated.</Description>
+			<SwitchMan>
+				<Set />
+				<Remove />
+				<Check />
+				<GoToIf />
+			</SwitchMan>
+			<Gateways>
+				<string>StartRoom</string>
+				<string>SwitchCheck</string>
+			</Gateways>
+		</Room>
+	</Rooms>
+</GameDef>

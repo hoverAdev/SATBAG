@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SATBAG_Studio": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}

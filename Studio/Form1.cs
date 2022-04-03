@@ -58,6 +58,10 @@ namespace SATBAG_GameBuilder
                 NameBox.Text = room.Name;
                 DescBox.Text = room.Description;
                 GateScroller.Controls.Clear();
+                GoToSwitch.DataSource = rooms.Keys.ToList();
+                SwitchText.Text = room.SwitchMan.Set;
+                SwitchCheckText.Text = room.SwitchMan.Check;
+                GoToSwitch.Text = room.SwitchMan.GoToIf;
 
                 if (rooms[NameBox.Text].Gateways is null)
                 {
@@ -109,6 +113,11 @@ namespace SATBAG_GameBuilder
                 if (rooms.TryAdd(r.Name, r))
                 {
                     r.Description = "";
+                    r.SwitchMan = new SwitchMan();
+                    r.SwitchMan.Set = "";
+                    r.SwitchMan.Remove = "";
+                    r.SwitchMan.Check = "";
+                    r.SwitchMan.GoToIf = "";
                     RoomList.TopNode.Nodes.Add(r.Name);
                     break;
                 }
@@ -167,7 +176,17 @@ namespace SATBAG_GameBuilder
 
         private void SwitchText_TextChanged(object sender, EventArgs e)
         {
-            rooms[NameBox.Text].SwitchSet = SwitchText.Text;
+            rooms[NameBox.Text].SwitchMan.Set = SwitchText.Text;
+        }
+
+        private void SwitchCheckText_TextChanged(object sender, EventArgs e)
+        {
+            rooms[NameBox.Text].SwitchMan.Check = SwitchCheckText.Text;
+        }
+
+        private void GoToSwitch_TextChanged(object sender, EventArgs e)
+        {
+            rooms[NameBox.Text].SwitchMan.GoToIf = GoToSwitch.Text;
         }
     }
 
@@ -220,12 +239,22 @@ namespace SATBAG_GameBuilder
         public String Name { get; set; }
 
         public String Description { get; set; }
-
-        public String SwitchSet { get; set; }
+        
+        public SwitchMan SwitchMan { get; set; }
 
         public List<String> Gateways { get; set; }
 
         public List<String> GatewayInputs { get; set; }
     }
 
+    public class SwitchMan
+    {
+        public String Set { get; set; }
+
+        public String Remove { get; set; }
+
+        public String Check { get; set; }
+
+        public String GoToIf { get; set; }
+    }
 }
